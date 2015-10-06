@@ -1,0 +1,9 @@
+{
+  "main": "me.bayes.vertx.http.VertxStarter",
+  "options": {
+    "worker": false,
+    "config": {
+
+    }
+  }
+}

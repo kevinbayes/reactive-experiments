@@ -1,0 +1,15 @@
+group 'me.bayes'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+apply plugin: 'java'
+
+jar {
+    baseName = 'vertx-example'
+    version =  '1.0.0'
+}
+
+jar.doLast { task ->
+    ant.checksum file: task.archivePath
+}

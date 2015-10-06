@@ -1,0 +1,66 @@
+apply plugin: 'idea'
+apply from: 'gradle/common.gradle'
+
+group 'me.bayes'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+
+    apply plugin: 'maven'
+    apply plugin: 'idea'
+
+    buildscript {
+        repositories {
+            maven { url "https://repo.spring.io/libs-release" }
+            mavenLocal()
+            mavenCentral()
+        }
+        dependencies {
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:$spring_boot_version")
+        }
+    }
+
+    repositories {
+        flatDir { dirs "${rootProject.projectDir}/libs" }
+        maven { url 'http://repo.spring.io/libs-release' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        mavenCentral()
+        mavenLocal()
+    }
+
+    project.plugins.withType(org.gradle.api.plugins.JavaPlugin) {
+
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+
+        dependencies {
+
+            compile vertx_jars
+            compile spring_boot_jars
+            compile jaxrs_jars
+            compile reactor_jars
+            compile vertx_jars
+            compile netty_jars
+            compile json_jars
+
+            testCompile test_jars
+            testCompile vertx_tests_jars
+        }
+
+    }
+
+    repositories {
+        maven { url 'http://repo.spring.io/libs-release' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        mavenCentral()
+        mavenLocal()
+    }
+
+}
+

@@ -1,0 +1,21 @@
+group 'me.bayes'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'reactor-example'
+    version =  '1.0.0'
+}
+
+jar.doLast { task ->
+    ant.checksum file: task.archivePath
+}
+
+dependencies {
+    compile "io.projectreactor.spring:reactor-spring-context:$reactor_version"
+}

@@ -1,0 +1,76 @@
+ext {
+    parent_version = "0.0.1-SNAPSHOT"
+
+    spring_core_version = '4.1.5.RELEASE'
+
+    spring_boot_version = '1.2.4.RELEASE'
+
+    jaxrs_version = '2.0.1'
+
+    jackson_version = '2.5.2'
+
+    vertx_version = '3.0.0'
+
+    reactor_version = '2.0.6.RELEASE'
+
+    netty_version = '4.0.32.Final'
+
+    junit_version = "4.12"
+}
+
+ext.cache_jars = [
+        'javax.cache:cache-api:1.0.0'
+]
+
+
+//"org.springframework.boot:spring-boot-starter-remote-shell:$spring_boot_version" If we need a remote shell. But causing out of memory exceptions on current small servers.
+ext.spring_boot_jars = [
+        "org.springframework.boot:spring-boot-starter:$spring_boot_version",
+]
+
+ext.jaxrs_jars= [
+        "javax.ws.rs:javax.ws.rs-api:$jaxrs_version"
+]
+
+ext.reactor_jars = [
+        "io.projectreactor:reactor-core:$reactor_version",
+        "io.projectreactor:reactor-net:$reactor_version",
+        "io.projectreactor:reactor-bus:$reactor_version",
+        "io.projectreactor:reactor-stream:$reactor_version"
+]
+
+ext.vertx_jars = [
+        "io.vertx:vertx-core:$vertx_version",
+        "io.vertx:vertx-rx-java:$vertx_version",
+        "io.vertx:vertx-hazelcast:$vertx_version",
+        "io.vertx:vertx-service-proxy:$vertx_version",
+        "io.vertx:vertx-service-factory:$vertx_version",
+        "io.vertx:vertx-codegen:$vertx_version"
+]
+
+ext.netty_jars = [
+        "io.netty:netty-all:$netty_version"
+]
+
+ext.vertx_tests_jars = [
+        "io.vertx:vertx-core:$vertx_version:tests",
+        "io.vertx:vertx-unit:$vertx_version"
+]
+
+ext.json_jars = [
+        "com.fasterxml.jackson.core:jackson-core:$jackson_version",
+        "com.fasterxml.jackson.core:jackson-annotations:$jackson_version",
+        "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
+]
+
+ext.spring_jars = [
+        "org.springframework:spring-context:$spring_core_version",
+        "org.springframework:spring-test:$spring_core_version"
+]
+
+ext.test_jars = [
+        "junit:junit:$junit_version",
+        "org.codehaus.groovy:groovy-all:2.4.4",
+        "org.spockframework:spock-core:1.0-groovy-2.4",
+        "org.spockframework:spock-spring:1.0-groovy-2.4"
+]
