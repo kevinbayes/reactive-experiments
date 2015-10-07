@@ -22,7 +22,6 @@ public class EchoService  {
                             (), entry1.getValue())));
 
             StringBuilder response = new StringBuilder().append("hello there.");
-            System.out.println(String.format("%s from thread %s", response.toString(), Thread.currentThread()));
             return channel.writeWith(Streams.just(Buffer.wrap(response.toString())));
         };
     }

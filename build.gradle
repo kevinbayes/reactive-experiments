@@ -41,6 +41,7 @@ subprojects {
 
         dependencies {
 
+            compile 'io.dropwizard.metrics:metrics-core:3.1.2'
             compile vertx_jars
             compile spring_boot_jars
             compile jaxrs_jars

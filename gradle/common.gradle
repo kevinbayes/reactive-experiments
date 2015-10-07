@@ -26,6 +26,7 @@ ext.cache_jars = [
 //"org.springframework.boot:spring-boot-starter-remote-shell:$spring_boot_version" If we need a remote shell. But causing out of memory exceptions on current small servers.
 ext.spring_boot_jars = [
         "org.springframework.boot:spring-boot-starter:$spring_boot_version",
+        "org.springframework.boot:spring-boot-starter-remote-shell:$spring_boot_version"
 ]
 
 ext.jaxrs_jars= [
