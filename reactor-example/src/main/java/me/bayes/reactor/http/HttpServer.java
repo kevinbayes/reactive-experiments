@@ -33,10 +33,6 @@ public class HttpServer {
                         .get("", EchoService.getHandler())
                         .start().awaitSuccess();
 
-
-
-
-
         latch.await();
 
     }
