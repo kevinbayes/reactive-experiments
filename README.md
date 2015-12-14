@@ -12,7 +12,9 @@ Frameworks:
 
 * Vertx (http://vertx.io)
 
-* Reactor (http://projectreactor.io/)
+* Reactor (http://projectreactor.io)
+
+* Undertow (http://undertow.io)
 
 Disclaimer:
 ----------
