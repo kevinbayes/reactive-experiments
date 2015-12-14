@@ -1,8 +1,6 @@
 group 'me.bayes'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-
 apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'spring-boot'

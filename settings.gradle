@@ -3,4 +3,6 @@ rootProject.name = 'reactive-experiments'
 include 'reactor-example'
 include 'vertx-example'
 include 'netty-example'
+include 'crashub-ext'
+include 'undertow-example'
 

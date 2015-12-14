@@ -4,8 +4,6 @@ apply from: 'gradle/common.gradle'
 group 'me.bayes'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
-
 repositories {
     mavenCentral()
 }
